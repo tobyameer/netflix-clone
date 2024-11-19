@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-y: scroll;
+    overflow-x: none;
+    background-color: black;
+    color: white;
+    overflow-x: hidden;
+}
+
+.poster {
+    position: relative;
+    width: 185px;
+    height: 130px;
+    background-color: rgb(31, 31, 31);
+    border-radius: 0.25rem;
+    overflow: hidden;
+    cursor: pointer;
+}
+.poster:hover {
+    position: absolute;
+    top: -90px;
+    z-index: 2;
+    width: 275px;
+    height: 280px;
+    -webkit-box-shadow: 0px 0px 16px -2px rgba(51,51,51,1);
+    -moz-box-shadow: 0px 0px 16px -2px rgba(51,51,51,1);
+    box-shadow: 0px 0px 16px -2px rgba(51,51,51,1);
+    .videoItem{
+        height: 60%;
+    }
+    .moviePoster{
+        display: none;
+    }
+}
+.videoItem video{
+    border-radius: 0.25rem;
+    position: absolute;
+    top: -63px;
+    left: 0;
+}
+/* w-[100%] h-[140px] object-cover absolute top-0 left-0 */
+/* w-[185px] h-[130px] bg-gray-800 rounded */
+
+.moviePoster {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 0.25rem;
+}
+

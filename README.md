@@ -2,9 +2,9 @@
 Netflix clone using MERN Stack (MongoDB, Express, React, Node).
 
 ## Core Packages
-1. Styling - Tailwind\
-2. React Router - Routing\
-3. Network calls - Axios\
+1. Styling - Tailwind
+2. React Router - Routing
+3. Network calls - Axios
 4. Video player - Videojs
 
 ## Video uploads

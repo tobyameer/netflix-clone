@@ -13,7 +13,7 @@ I built a full-stack Netflix clone using the MERN stack (MongoDB, Express, React
 7. HTML/CSS (Responsive design, layout with Flexbox/Grid)
 8. Deployment (Heroku, Netlify, MongoDB Atlas)
 <br />
-## Technologies Used
+### Technologies Used
 1. Frontend:
   * React.js: Used for building a dynamic, component-based UI. I utilized React Router to handle navigation between different sections (home page, movie details, login, etc.).
   * Tailwind CSS: Applied for styling the components. Tailwind’s utility classes allowed me to create responsive and customizable layouts quickly and maintain consistency throughout the app.
@@ -31,7 +31,7 @@ I built a full-stack Netflix clone using the MERN stack (MongoDB, Express, React
 4. API Testing (Postman):
   * Postman: I created and tested various API routes for user login, sign-up, and fetching movie data to ensure they were working correctly before integrating them into the front-end. I also used Postman to simulate authentication and test the secure endpoints.
     <br />
-## Challenges Faced:
+#### Challenges Faced:
 1. Managing Authentication: "Implementing secure JWT authentication for user sessions was one challenge. Ensuring that the JWT tokens were securely stored and validated across different pages required careful integration between the front-end and back-end."
 
 2. Fetching and Displaying Data Dynamically: "Handling dynamic movie data from Firebase and MongoDB posed challenges when ensuring that data was displayed correctly in the React components. I had to manage state efficiently to ensure that data was loaded asynchronously and updated in real-time."

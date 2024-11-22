@@ -4,14 +4,14 @@ I built a full-stack Netflix clone using the MERN stack (MongoDB, Express, React
 
 
 ## Skills
-1. React.js (Components, State Management, React Router)\
-2. Node.js & Express (API development, server-side logic)\
-3. MongoDB & Mongoose (Database design, data interaction)\
-4. JWT Authentication (User authentication, session management)\
-5. Postman (API testing, debugging)\
-6. Axios (API data fetching)\
-7. HTML/CSS (Responsive design, layout with Flexbox/Grid)\
-8. Deployment (Heroku, Netlify, MongoDB Atlas)\
+1. React.js (Components, State Management, React Router)
+2. Node.js & Express (API development, server-side logic)
+3. MongoDB & Mongoose (Database design, data interaction)
+4. JWT Authentication (User authentication, session management)
+5. Postman (API testing, debugging)
+6. Axios (API data fetching)
+7. HTML/CSS (Responsive design, layout with Flexbox/Grid)
+8. Deployment (Heroku, Netlify, MongoDB Atlas)
 
 ## Technologies Used
 1. Frontend:

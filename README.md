@@ -32,12 +32,11 @@ I built a full-stack Netflix clone using the MERN stack (MongoDB, Express, React
   * Postman: I created and tested various API routes for user login, sign-up, and fetching movie data to ensure they were working correctly before integrating them into the front-end. I also used Postman to simulate authentication and test the secure endpoints.
     
 ## Challenges Faced:
-1. Managing Authentication: "Implementing secure JWT authentication for user sessions was one challenge. Ensuring that the JWT tokens were securely stored and validated across different pages required careful integration between the front-end and back-end."
+1. Managing Authentication: Implementing secure JWT authentication for user sessions was one challenge. Ensuring that the JWT tokens were securely stored and validated across different pages required careful integration between the front-end and back-end.
 
-2. Fetching and Displaying Data Dynamically: "Handling dynamic movie data from Firebase and MongoDB posed challenges when ensuring that data was displayed correctly in the React components. I had to manage state efficiently to ensure that data was loaded asynchronously and updated in real-time."
+2. Fetching and Displaying Data Dynamically: Handling dynamic movie data from Firebase and MongoDB posed challenges when ensuring that data was displayed correctly in the React components. I had to manage state efficiently to ensure that data was loaded asynchronously and updated in real-time.
 
-3. Responsive Design: "While using Tailwind CSS helped with styling, making the app fully responsive across different devices required fine-tuning the layout and ensuring that the interface worked on both small screens (mobile) and large screens (desktop)."
-
+3. Responsive Design: "While using Tailwind CSS helped with styling, making the app fully responsive across different devices required fine-tuning the layout and ensuring that the interface worked on both small screens mobile and large screens desktop.
 
 
 

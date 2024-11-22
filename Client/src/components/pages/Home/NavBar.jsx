@@ -15,7 +15,7 @@ const NavBar = () => {
             English
             <FaAngleDown />
           </button>
-          <Link to={"/SignIn"}>
+          <Link to={"/signIn"}>
             <button className="bg-[#E50914] mx-2 text-white font-semibold text-[13.5px] w-[80px] h-[33px] rounded-[5px]">
               Sign In
             </button>

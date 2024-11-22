@@ -1,7 +1,17 @@
-import React from "react";
+import React, { useContext, useState } from "react";
+import { login } from "../../../authContext/apiCalls";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../../authContext/AuthContext";
 
 const LogForm = () => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const { dispatch } = useContext(AuthContext);
+
+  const handleLogin = (e) => {
+    e.preventDefault();
+    login({ email, password }, dispatch);
+  };
   return (
     <div>
       <div className="mt-[20px] flex justify-center ">
@@ -13,17 +23,22 @@ const LogForm = () => {
           <input
             type="text"
             placeholder="Email or mobile number"
+            onChange={(e) => setEmail(e.target.value)}
             className="my-1  w-full  h-[55px] rounded-md text-white border-[1px] pl-3 border-[#767676]"
             style={{ backgroundColor: "rgba(30, 30, 30, 0.5" }}
           />
           <input
             type="text"
             placeholder="Password"
+            onChange={(e) => setPassword(e.target.value)}
             className="my-3 w-full h-[55px] rounded-md text-white border-[1px] pl-3 border-[#767676]"
             style={{ backgroundColor: "rgba(30, 30, 30, 0.5" }}
           />
           <Link to={"/profiles"} className="">
-            <button className="flex justify-center items-center  bg-[#E50914]  text-white  text-[16px] w-full h-[37px] rounded-[5px]">
+            <button
+              onClick={handleLogin}
+              className="flex justify-center items-center  bg-[#E50914]  text-white  text-[16px] w-full h-[37px] rounded-[5px]"
+            >
               Sign In
             </button>
           </Link>

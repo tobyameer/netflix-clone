@@ -40,9 +40,8 @@ const MovieList = ({ list }) => {
 
         <div ref={listRef} className=" flex gap-2 mx-[30px] w-max">
           {list.content.map((item, index) => (
-            <MovieItem index={index} key={index} item={item} />
+            <MovieItem index={index} item={item} />
           ))}
-          <MovieItem index={0} />
         </div>
         <IoIosArrowForward
           onClick={() => handleFunction("right")}

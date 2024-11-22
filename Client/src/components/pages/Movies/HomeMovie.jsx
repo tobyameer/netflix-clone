@@ -14,7 +14,7 @@ const HomeMovie = ({ type }) => {
         const res = await axios.get(`lists${type ? "?type=" + type : ""}`, {
           headers: {
             token:
-              "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2ODMxNGU0ODk2MjAxNTM4NTM2ZmQxYyIsImlzQWRtaW4iOnRydWUsImlhdCI6MTcyOTk1NjQ1MSwiZXhwIjoxNzMwMzg4NDUxfQ.FOO6FhTNYQG52yTqgwGB6fjLzmqJr4ogQn_m7S3E4Zs",
+              "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2ODMxNGU0ODk2MjAxNTM4NTM2ZmQxYyIsImlzQWRtaW4iOnRydWUsImlhdCI6MTczMjIwMjI5MSwiZXhwIjoxNzMyNjM0MjkxfQ.SW6K9xhoz0kwn_q29EQBlbIa1SvFcF2pgg9Q9XtYkeM",
           },
         });
         console.log(res);

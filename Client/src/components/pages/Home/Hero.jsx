@@ -1,7 +1,31 @@
-import React from "react";
 import { MdNavigateNext } from "react-icons/md";
+import axios from "axios";
+import { useRef } from "react";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Hero = () => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [username, setUsername] = useState("");
+  const history = useNavigate();
+
+  const emailRef = useRef();
+  const passwordRef = useRef();
+  const usernameRef = useRef();
+
+  const handleStart = () => {
+    setEmail(emailRef.current.value);
+  };
+  const handleFinish = async (e) => {
+    e.preventDefault();
+    setPassword(passwordRef.current.value);
+    setUsername(usernameRef.current.value);
+    try {
+      await axios.post("auth/register", { email, username, password });
+      history("/signIn");
+    } catch (err) {}
+  };
   return (
     <div>
       <div className="flex flex-col items-center text-white lg:mt-[180px] mt-[50px]">
@@ -17,18 +41,47 @@ const Hero = () => {
             membership.
           </p>
         </div>
-        <div className="flex flex-col mt-5 max-w-[700px]  sm:flex-row px-[50px] w-full  items-center">
-          <input
-            type="text"
-            placeholder="Email address"
-            className=" w-[100%] h-[55px] rounded-sm text-white border-[1px] pl-3 border-[#767676]"
-            style={{ backgroundColor: "rgba(0, 0, 0, 0.3)" }}
-          />
+        {!email ? (
+          <div className="flex flex-col mt-5 max-w-[700px]  sm:flex-row px-[50px] w-full  items-center">
+            <input
+              type="text"
+              ref={emailRef}
+              placeholder="Email address"
+              className=" w-[100%] h-[55px] rounded-sm text-white border-[1px] pl-3 border-[#767676]"
+              style={{ backgroundColor: "rgba(0, 0, 0, 0.3)" }}
+            />
 
-          <button className="flex my-6 justify-center  items-center  bg-[#E50914] mx-2 text-white font-semibold text-[22px] sm:w-[400px] w-[180px] h-[50px] rounded-[5px]">
-            Get Started <MdNavigateNext className="ml-2" />
-          </button>
-        </div>
+            <button
+              onClick={handleStart}
+              className="flex my-6 justify-center  items-center  bg-[#E50914] mx-2 text-white font-semibold text-[22px] sm:w-[400px] w-[180px] h-[50px] rounded-[5px]"
+            >
+              Get Started <MdNavigateNext className="ml-2" />
+            </button>
+          </div>
+        ) : (
+          <form className="flex flex-col mt-5 max-w-[700px]  sm:flex-row px-[50px] w-full  items-center">
+            <input
+              className=" w-[50%] h-[55px] rounded-sm text-white border-[1px] pl-3 border-[#767676]"
+              type="username"
+              style={{ backgroundColor: "rgba(0, 0, 0, 0.3)" }}
+              placeholder="username"
+              ref={usernameRef}
+            />
+            <input
+              className=" w-[50%] h-[55px] rounded-sm text-white border-[1px] pl-3 border-[#767676]"
+              type="password"
+              placeholder="password"
+              ref={passwordRef}
+              style={{ backgroundColor: "rgba(0, 0, 0, 0.3)" }}
+            />
+            <button
+              onClick={handleFinish}
+              className="flex my-6 justify-center  items-center  bg-[#E50914] mx-2 text-white font-semibold text-[22px] sm:w-[400px] w-[180px] h-[50px] rounded-[5px]"
+            >
+              Start
+            </button>
+          </form>
+        )}
       </div>
     </div>
   );

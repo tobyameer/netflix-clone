@@ -7,7 +7,7 @@ const Footer = () => {
     <div className="mx-[30px]">
       <u className="flex text-[#9D9D9D] mt-[40px] ">Questions? Contact us.</u>
       <div className="flex my-[20px]">
-        <ul className="gap-3 rows-8 w-full text-[#9D9D9D]">
+        <ul className="grid grid-cols-4 w-full text-[#9D9D9D]">
           <u>FAQ</u>
           <u>Account</u>
           <u>Investor Relations</u>

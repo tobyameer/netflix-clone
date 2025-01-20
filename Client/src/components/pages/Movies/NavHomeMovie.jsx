@@ -20,7 +20,7 @@ const NavHomeMovie = () => {
     >
       <div className=" h-[45px] flex justify-between align-center items-center">
         <div className="flex justify-evenly">
-          <Link to={"/"}>
+          <Link to={"/home"}>
             <img src={Logo} alt="logo" className="w-[70px] " />
           </Link>
           <ul className="ml-3 flex align-center items-center text-[8px] gap-4">

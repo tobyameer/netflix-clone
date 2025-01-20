@@ -7,7 +7,7 @@ import trailer from "./trailer.mp4";
 const MovieWatch = () => {
   return (
     <div className="w-screen h-screen">
-      <Link to={"/"}>
+      <Link to={"/home"}>
         <IoMdArrowBack
           className="flex text-white absolute top-[10px] left-[10px] cursor-pointer z-10"
           size={30}

@@ -15,10 +15,10 @@ const MovieHero = ({ type }) => {
   useEffect(() => {
     const getRandomContent = async () => {
       try {
-        const res = await axios.get(`/movies/random?type=${type}`, {
+        const res = await axios.get(`/movies/random`, {
           headers: {
             token:
-              "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2ODMxNGU0ODk2MjAxNTM4NTM2ZmQxYyIsImlzQWRtaW4iOnRydWUsImlhdCI6MTczMjIwMjI5MSwiZXhwIjoxNzMyNjM0MjkxfQ.SW6K9xhoz0kwn_q29EQBlbIa1SvFcF2pgg9Q9XtYkeM",
+              "Bearer " + JSON.parse(localStorage.getItem("user")).accessToken,
           },
         });
         setContent(res.data[0]);
@@ -36,9 +36,13 @@ const MovieHero = ({ type }) => {
           <div className="h-[80px]">
             <span className=" text-[30px]">{type}</span>
           </div>
-          <img src={content.imgTitle} alt="" className="w-[200px]" />
-          <p className="my-3 h-[50%] text-[0.4em] md:text-[.6em] overflow-hidden ... max-h-[27px]">
-            {content.desc}
+          <img
+            src={content.imgTitle}
+            alt=""
+            className="w-[200px] h-[100px] object-fill"
+          />
+          <p className="my-3 h-[50%] text-[10px] md:text-[20px] font-semibold overflow-hidden max-h-[27px]">
+            {content.title}
           </p>
           <div className="flex gap-3">
             <button className="flex justify-center gap-2 items-center h-[25px] text-[14px] font-semibold rounded w-[80px] bg-white text-black px-">

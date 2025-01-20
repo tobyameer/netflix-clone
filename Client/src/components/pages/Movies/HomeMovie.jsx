@@ -3,6 +3,7 @@ import NavHomeMovie from "./NavHomeMovie";
 import MovieList from "./MovieList";
 import MovieHero from "./MovieHero";
 import axios from "axios";
+import Footer from "../Home/Footer";
 
 const HomeMovie = ({ type }) => {
   const [lists, setLists] = useState([]);
@@ -14,7 +15,7 @@ const HomeMovie = ({ type }) => {
         const res = await axios.get(`lists${type ? "?type=" + type : ""}`, {
           headers: {
             token:
-              "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2ODMxNGU0ODk2MjAxNTM4NTM2ZmQxYyIsImlzQWRtaW4iOnRydWUsImlhdCI6MTczMjIwMjI5MSwiZXhwIjoxNzMyNjM0MjkxfQ.SW6K9xhoz0kwn_q29EQBlbIa1SvFcF2pgg9Q9XtYkeM",
+              "Bearer " + JSON.parse(localStorage.getItem("user")).accessToken,
           },
         });
         console.log(res);
@@ -32,6 +33,7 @@ const HomeMovie = ({ type }) => {
       {lists.map((list, index) => (
         <MovieList index={index} key={index} list={list} />
       ))}
+      <Footer />
     </div>
   );
 };

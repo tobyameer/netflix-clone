@@ -38,7 +38,7 @@ const MovieList = ({ list }) => {
           }
         />
 
-        <div ref={listRef} className=" flex gap-2 mx-[30px] w-max">
+        <div ref={listRef} className=" flex gap-2 mx-[30px] w-max ">
           {list.content.map((item, index) => (
             <MovieItem index={index} item={item} />
           ))}

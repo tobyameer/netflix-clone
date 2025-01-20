@@ -4,25 +4,25 @@ import { IoLanguage } from "react-icons/io5";
 
 const Footer = () => {
   return (
-    <div className="mx-[30px]">
-      <u className="flex text-[#9D9D9D] mt-[40px] ">Questions? Contact us.</u>
+    <div className="mx-[30px] my-[80px]">
+      {/* <ol className="flex text-[#9D9D9D] mt-[40px] ">Questions? Contact us.</ol> */}
       <div className="flex my-[20px]">
-        <ul className="grid grid-cols-4 w-full text-[#9D9D9D]">
-          <u>FAQ</u>
-          <u>Account</u>
-          <u>Investor Relations</u>
-          <u>Ways to watch</u>
-          <u>Privacy</u>
-          <u>Corporate Information</u>
-          <u>Speed Test</u>
-          <u>Only on Netflix</u>
-          <u>Help Center</u>
-          <u>Media Center</u>
-          <u>Jobs</u>
-          <u>Terms of Use</u>
-          <u>Cookie Preference</u>
-          <u>Contact Us</u>
-          <u>Legal Notices</u>
+        <ul className="grid grid-cols-2 lg:grid-cols-4 gap-2  w-full text-[#9D9D9D]">
+          <ol>FAQ</ol>
+          <ol>Account</ol>
+          <ol>Investor Relations</ol>
+          <ol>Ways to watch</ol>
+          <ol>Privacy</ol>
+          <ol>Corporate Information</ol>
+          <ol>Speed Test</ol>
+          <ol>Only on Netflix</ol>
+          <ol>Help Center</ol>
+          <ol>Media Center</ol>
+          <ol>Jobs</ol>
+          <ol>Terms of Use</ol>
+          <ol>Cookie Preference</ol>
+          <ol>Contact Us</ol>
+          <ol>Legal Notices</ol>
         </ul>
       </div>
       <div>

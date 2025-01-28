@@ -3,6 +3,9 @@
 I built a full-stack Netflix clone using the MERN stack (MongoDB, Express, React, Node.js) for the back-end, with Firebase for storing movie-related content and MongoDB for user authentication and for storing movie data. I used Tailwind CSS to build a responsive and sleek UI, and I tested and debugged the backend APIs using Postman. The project mimics the Netflix experience by allowing users to browse movies, view details, and watch trailers. I integrated Firebase for storing movie data and used JWT-based authentication for secure user login.
 <br />
 
+[img alt](![Uploading Screenshot 2025-01-28 at 11.45.55 AM.png…]()
+)
+
 ## Skills
 1. React.js (Components, State Management, React Router)
 2. Node.js & Express (API development, server-side logic)

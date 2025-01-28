@@ -4,6 +4,7 @@ I built a full-stack Netflix clone using the MERN stack (MongoDB, Express, React
 <br />
 
 ![Netflix Home Page](https://github.com/tobyameer/netflix-clone/blob/main/NeftlixHomePage.png)
+![Netflix Movie Page](https://github.com/tobyameer/netflix-clone/blob/main/NetflixMoviePage.png)
 
 
 ## Skills
